@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragmentShopping"
+    tools:context="com.knowroaming.shoppinglist.ShoppingFragment">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/userIdLabel"
+        android:text="@string/userId"
+        android:layout_marginBottom="50dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/userId"
+        android:layout_toRightOf="@+id/userIdLabel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/labelProductName"
+
+        android:text="@string/productName"
+        android:layout_above="@+id/labelAmount"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/productName"
+        android:layout_above="@+id/amount"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/labelAmount"
+        android:text="@string/amount"
+        android:layout_below="@+id/userIdLabel"
+        android:layout_marginTop="22dp"
+        android:layout_alignEnd="@+id/labelProductName" />
+
+    <EditText
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/amount"
+        android:layout_below="@+id/labelProductName"
+        android:layout_alignStart="@+id/price" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/labelPrice"
+        android:text="@string/price"
+        android:layout_above="@+id/description"
+        android:layout_toEndOf="@+id/userIdLabel" />
+
+    <EditText
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/price"
+        android:layout_below="@+id/amount"
+        android:layout_alignStart="@+id/description" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/labelDesc"
+        android:text="@string/description"
+        android:layout_alignBottom="@+id/description"
+        android:layout_alignEnd="@+id/labelAmount" />
+
+    <EditText
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/description"
+        android:layout_below="@+id/price"
+        android:layout_alignStart="@+id/productName" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAddToList"
+        android:layout_alignParentBottom="true"
+        android:text="@string/addList"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnClose"
+        android:text="@string/close"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/btnAddToList"/>
+</RelativeLayout>
